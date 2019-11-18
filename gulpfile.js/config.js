@@ -22,7 +22,7 @@ config.styles = {
   base: `${config.assets}`
 };
 config.styles = Object.assign(config.styles, {
-  stylesheet: `${config.styles.base}/**/main.scss`
+  stylesheet: `${config.styles.base}/**/main.{scss,less}`
 });
 
 config.scripts = {
