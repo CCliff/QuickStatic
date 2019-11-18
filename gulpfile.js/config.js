@@ -26,7 +26,8 @@ config.styles = Object.assign(config.styles, {
 });
 
 config.scripts = {
-  base: `${config.assets}/scripts`
+  base: `${config.assets}/scripts`,
+  lib:  `${config.assets}/scripts/lib`
 };
 config.scripts = Object.assign(config.scripts, {
   script: `${config.scripts.base}/**/index.js`,
