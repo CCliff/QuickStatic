@@ -27,7 +27,7 @@ gulp.task('scripts', () => {
 
 
 
-  gulp.src(`${config.scripts.base}/**/index.js`)
+  gulp.src(`${config.scripts.base}/index.js`)
     .pipe(bro(broOptions))
     .pipe(gulp.dest(`${config.dist}/assets/scripts`));
 });
