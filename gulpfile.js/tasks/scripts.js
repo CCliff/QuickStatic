@@ -1,6 +1,6 @@
 const gulp       = require('gulp');
 const config     = require('../config').config;
-const babelify   = require("babelify");
+const babelify   = require('babelify');
 const bro        = require('gulp-bro');
 
 gulp.task('scripts', () => {
@@ -25,9 +25,10 @@ gulp.task('scripts', () => {
     broOptions.debug = false;
   }
 
-
-
-  gulp.src(`${config.scripts.base}/index.js`)
+  gulp.src([
+    `${config.scripts.base}/index.js`,
+    `${config.scripts.lib}/**/*.js`
+  ], { base : config.scripts.base })
     .pipe(bro(broOptions))
     .pipe(gulp.dest(`${config.dist}/assets/scripts`));
 });
