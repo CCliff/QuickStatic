@@ -25,8 +25,6 @@ gulp.task('scripts', () => {
     broOptions.debug = false;
   }
 
-
-
   gulp.src([
     `${config.scripts.base}/index.js`,
     `${config.scripts.lib}/**/*.js`
